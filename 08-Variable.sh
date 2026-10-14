@@ -13,7 +13,12 @@ echo "name of the script is: $BASH"
 echo "Present working directory is: $PWD"
 echo "Home directory of the current user is: $HOME"
 echo "The process ID of the current script is: $$"
-echo "The process ID of the last executed command is: $!"
+sleep 25 &
+echo "The process ID of the last background command is: $!"
+Wait $! # Wait for the background process to finish
+echo "Line number of the last executed command is: $LINENO"
+echo "The exit status of the last executed command is: $?"
+echo "Total time excuted  for this script is: $SECONDS"
 echo "The last foreground command is: $?"
 echo "The last executed command is: $BASH_COMMAND"
 echo "The last executed command is: $BASH_LINENO"
