@@ -15,3 +15,6 @@ declare -i COUNT=94
 ###In this case, COUNT is declared as an integer with an initial value of 94.###
 COUNT=$((COUNT + 1))
 echo "Updated COUNT: $COUNT"
+Fruits=("Apple" "Banana" "Orange" "Grapes")
+ ### This line declares an array named Fruits and initializes it with four string elements: "Apple", "Banana", "Orange", and "Grapes".###
+echo "Fruits: ${Fruits[@]}"
