@@ -17,4 +17,4 @@ COUNT=$((COUNT + 1))
 echo "Updated COUNT: $COUNT"
 Fruits=("Apple" "Banana" "Orange" "Grapes")
  ### This line declares an array named Fruits and initializes it with four string elements: "Apple", "Banana", "Orange", and "Grapes".###
-echo "Fruits: ${Fruits[@]}"
+echo "Array Fruits: ${Fruits[@]}"
