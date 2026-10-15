@@ -23,6 +23,23 @@ declare -i COUNT=94
 ###In this case, COUNT is declared as an integer with an initial value of 94.###
 COUNT=$((COUNT - 1))
 echo "Updated Decremental COUNT: $COUNT"
+##Case-1 ### Prefix-1 both incremental and decremental counting ###
+count=10
+COUNT=$((count ++  ))
+COUNT=$((count --  ))
+### Postfix Incremental and Decremental Counting ###
+count=10
+COUNT=$((++ count   ))
+COUNT=$((-- count ))
+##Case-2 ### Prefix-1 both incremental and decremental counting ###
+count=10
+COUNT=$((count ++ +5 ))
+COUNT=$((count --  -5 ))
+### Postfix Incremental and Decremental Counting ###
+count=10
+COUNT=$((+5 ++ count   ))
+COUNT=$((-5 --count ))
+
 Fruits=("Apple" "Banana" "Orange" "Grapes")
  ### This line declares an array named Fruits and initializes it with four string elements: "Apple", "Banana", "Orange", and "Grapes".###
 echo "Array Fruits: ${Fruits[@]}"
