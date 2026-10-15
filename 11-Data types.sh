@@ -31,11 +31,11 @@ echo "Quotient: $quotient"
 float1=3.5
 float2=1.2
 bc=basic calculator
-float_sum=$(echo "$float1 + $float2" | bc)
+float_sum=$(echo "$float1 + $float2" | bc -1)
 echo "Float Sum: $float_sum"
-float_difference=$(echo "$float1 - $float2" | bc)
+float_difference=$(echo "$float1 - $float2" | bc -1)
 echo "Float Difference: $float_difference"
-float_product=$(echo "$float1 * $float2" | bc)
+float_product=$(echo "$float1 * $float2" | bc -1)
 echo "Float Product: $float_product"
-float_quotient=$(echo "scale=2; $float1 / $float2" | bc)
+float_quotient=$(echo "scale=2; $float1 / $float2" | bc -1  )
 echo "Float Quotient: $float_quotient"
