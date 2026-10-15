@@ -1,9 +1,9 @@
 #!/bin/bash
 var1="Hello"
-var2="Hello"
+var2="World"
 # Concatenation of strings
 result="$var1 $var2"
-echo "Concatenated String: $result"
+echo "Concatenated String: $result!"
 # Length of a string
 length=${#result}
 echo "Length of the string: $length"
