@@ -1,6 +1,6 @@
 #!/bin/bash
 var1="Hello"
-var2="World"
+var2="Hello"
 # Concatenation of strings
 result="$var1 $var2"
 echo "Concatenated String: $result"
