@@ -51,9 +51,9 @@ echo "All Names: ${NAMES[*]}"
 ### This line prints all the elements of the NAMES array, separated by spaces. The * symbol is used to represent all the elements of the array. In this case, it will print "Alice Bob Charlie David".###
 echo "All Names: ${NAMES[@]}"
 ### This line also prints all the elements of the NAMES array, separated by spaces. The @ symbol is used to represent all the elements of the array. In this case, it will also print "Alice Bob Charlie David". The difference between ${NAMES[*]} and ${NAMES[@]} is that the former treats the entire array as a single string, while the latter treats each element of the array as a separate string. In this case, both will produce the same output, but in other contexts, they may behave differently. For example, if you were to use them in a loop, ${NAMES[*]} would iterate over the entire array as a single string, while ${NAMES[@]} would iterate over each element of the array separately.###
-NAME=Santosh kumar P
-echo "Name: ${NAME}anchireddy"
-### This line declares a variable named NAME and initializes it with the string "Santosh kumar P". The variable can hold any string value, including spaces. In this case, the variable NAME is assigned the value "Santosh kumar P". The echo command is used to print the value of the variable NAME, followed by the string "anchireddy". The output will be "Name: Santosh kumar Panchireddy".###
+Name=Santosh kumar P
+echo "Name: ${Name}anchireddy"
+### This line declares a variable named Name and initializes it with the string "Santosh kumar P". The variable can hold any string value, including spaces. In this case, the variable Name is assigned the value "Santosh kumar P". The echo command is used to print the value of the variable Name, followed by the string "anchireddy". The output will be "Name: Santosh kumar Panchireddy".###
 Name=Vera Venkata Satya Naga Sanjay kumar P
 echo "Name: ${Name}alli"
 ### This line declares a variable named Name and initializes it with the string "Vera Venkata Satya Naga Sanjay kumar P". The variable can hold any string value, including spaces. In this case, the variable Name is assigned the value "Vera Venkata Satya Naga Sanjay kumar P". The echo command is used to print the value of the variable Name, followed by the string "alli". The output will be "Name: Vera Venkata Satya Naga Sanjay kumar Palli".###
