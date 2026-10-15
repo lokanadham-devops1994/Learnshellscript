@@ -13,3 +13,4 @@ elif [ $marks -ge 75 ] && [ $marks -le 100 ]; then
 else
     echo "Invalid marks entered."
 fi
+echo  "Thank you for using the grading system!."

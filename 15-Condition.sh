@@ -18,4 +18,5 @@ elif [ $marks -ge 75 ] && [ $marks -le 100 ]; then
     echo "The student has passed with distinction- Excellent!"
 else
     echo "Invalid marks entered."
-fi  
+fi 
+echo  "Thank you for using the grading system!." 
