@@ -30,7 +30,7 @@ echo "Quotient: $quotient"
 # Float arithmetic using bc
 float1=3.5
 float2=1.2
-bc=bc -1 #### bc=basic calculator ####
+bc=bc -1 ####bc=basic calculator####
 float_sum=$(echo "$float1 + $float2" | bc)
 echo "Float Sum: $float_sum"
 float_difference=$(echo "$float1 - $float2" | bc)
