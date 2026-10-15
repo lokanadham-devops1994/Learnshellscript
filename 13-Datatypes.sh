@@ -51,10 +51,9 @@ echo "All Names: ${NAMES[*]}"
 ### This line prints all the elements of the NAMES array, separated by spaces. The * symbol is used to represent all the elements of the array. In this case, it will print "Alice Bob Charlie David".###
 echo "All Names: ${NAMES[@]}"
 ### This line also prints all the elements of the NAMES array, separated by spaces. The @ symbol is used to represent all the elements of the array. In this case, it will also print "Alice Bob Charlie David". The difference between ${NAMES[*]} and ${NAMES[@]} is that the former treats the entire array as a single string, while the latter treats each element of the array as a separate string. In this case, both will produce the same output, but in other contexts, they may behave differently. For example, if you were to use them in a loop, ${NAMES[*]} would iterate over the entire array as a single string, while ${NAMES[@]} would iterate over each element of the array separately.###
-
-name=Santosh kumar P
+name="Santosh kumar P"
 echo "Name: ${name}anchireddy"
 ### This line declares a variable named name and initializes it with the string "Santosh kumar P". The variable can hold any string value, including spaces. In this case, the variable name is assigned the value "Santosh kumar P". The echo command is used to print the value of the variable name, followed by the string "anchireddy". The output will be "Name: Santosh kumar Panchireddy".###
-name=Vera Venkata Satya Naga Sanjay kumar P
+name="Vera Venkata Satya Naga Sanjay kumar P"
 echo "Name: ${name}alli"
 ### This line declares a variable named name and initializes it with the string "Vera Venkata Satya Naga Sanjay kumar P". The variable can hold any string value, including spaces. In this case, the variable name is assigned the value "Vera Venkata Satya Naga Sanjay kumar P". The echo command is used to print the value of the variable name, followed by the string "alli". The output will be "Name: Vera Venkata Satya Naga Sanjay kumar Palli".###
