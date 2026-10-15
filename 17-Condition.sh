@@ -1,6 +1,6 @@
 #!/bin/bash
 user_id=$(id -u)
-if [ "$user_id" -neq 0 ]; then
+if [ "$user_id" -ne 0 ]; then
     echo "You are running this script as root user with sudo acess."
     exit 1
 else    
