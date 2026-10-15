@@ -1,7 +1,7 @@
 #!/bin/bash
 user_id=$(id -u)
 if [ "$user_id" -ne 0 ]; then
-    echo "You are running this script as  root user with sudo acess, you cannot be accessed failed."
+    echo "You are running this script as  root user with sudo acess, you can be accessed failed."
     exit 0
 else
     echo "You are running this script as root user with sudo acess,you can be accessed successfully."
