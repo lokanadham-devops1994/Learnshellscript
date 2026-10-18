@@ -18,7 +18,8 @@ validate(){
         echo "${2}  successful." | tee -a $log_file
         fi
         }
-    for package in $@; do
+    for package in $@; 
+    do
         echo "Going to install: ${package}"
         dnf install ${package} -y  &>> $log_file
         validate $? "${package} installation"
