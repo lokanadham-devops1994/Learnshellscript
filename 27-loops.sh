@@ -4,7 +4,7 @@ logs_folder="/var/log/shellscript-Practice"
 log_file="${logs_folder}/${0}.log"
 if [ $user_id -ne 0 ]; then
   echo "Please run this script with root privileges."
-    exit 1
+    exit 0
 else
     echo "You are running this script as root user with sudo acess,you can be accessed successfully."
 fi 
@@ -26,7 +26,7 @@ for package in $@;
             dnf install $package -y &>> $log_file
             validate $? "installaling ${package}"
         else
-            echo "${package} is already installed.......,skipping."
+            echo "${package} is already installed.......,SKIPPING."
         fi
     done
 echo "Script execution completed at $(date +"%F %T")" &>> $log_file
