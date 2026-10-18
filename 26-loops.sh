@@ -10,8 +10,7 @@ else
 fi 
 mkdir -p "$logs_folder"
 echo "Script execution started at $(date +"%F %T")" &>> $log_file
-validate()
-    {
+validate(){
     if [ $1 -ne 0 ]; then
         echo "${2}  failed." | tee -a $log_file
         exit 1
@@ -19,7 +18,7 @@ validate()
         echo "${2}  successful." | tee -a $log_file
         fi
         }
-    for package in $@ 
+for package in $@;
     do
         echo "Going to install: ${package}"
         dnf install $package -y  &>> $log_file
