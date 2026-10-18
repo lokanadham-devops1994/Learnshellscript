@@ -18,6 +18,6 @@ validate(){
         echo "${2}  successful." | tee -a $log_file
         fi
         }
-    for package in {$@}; do
-        echo "Going to install: $package"
+    for package in $@; do
+        echo "Going to install: ${package}"
     done
