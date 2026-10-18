@@ -12,10 +12,10 @@ mkdir -p "$logs_folder"
 echo "Script execution started at $(date +"%F %T")" 
 validate(){
     if [ $1 -ne 0 ]; then
-        echo "${2} installation failed." | tee -a $log_file 
+        echo "${2} installation failed." 
         exit 1
     else    
-        echo "${2} installation successful." | tee -a $log_file
+        echo "${2} installation successful."
         fi
         }
 dnf install nginx -y  &>> $log_file
