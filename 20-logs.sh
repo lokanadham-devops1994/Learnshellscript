@@ -9,7 +9,6 @@ else
     echo "You are running this script as root user with sudo acess,you can be accessed successfully."
 fi 
 mkdir -p "$logs_folder"
-echo -n "Logs will be saved in $log_file"
 echo "Script execution started at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
 validate(){
     if [ $? -ne 0 ]; then
