@@ -29,4 +29,3 @@ for package in $@;
             echo "${package} is already installed.......,SKIPPING."
         fi
     done
-echo "Script execution completed at $(date +"%F %T")" &>> $log_file
