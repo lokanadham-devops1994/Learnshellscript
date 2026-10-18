@@ -8,7 +8,7 @@ G="\e[1;32m"
 Y="\e[1;33m"
 M="\e[1;35m"
 N="\e[0m"
-trap 'echo "Error at "$LINENO", command"$BASH_COMMANND""'ERR
+trap 'echo"Error at "$LINENO", command:"$BASH_COMMANND""' ERR
 if [ $user_id -ne 0 ]; then
   echo "Please run this script with root privileges."
     exit 0
