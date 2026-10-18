@@ -24,7 +24,7 @@ for package in $@;
         if [ $? -eq 0 ]; then
             echo "Going to install: ${package}"
             dnf install $package -y &>> $log_file
-            validate $? "${package} installation"
+            validate $? "installaling ${package}"
         else
             echo "${package} is already installed,skipping."
         fi
