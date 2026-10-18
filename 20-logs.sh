@@ -16,7 +16,8 @@ validate(){
         exit 1
     else    
         echo "${2} installation successful." | tee -a $log_file
-}
+        fi
+        }
 dnf install nginx -y  &>> $log_file
 validate $? "nginx installation"
 dnf install mysql -y &>> $log_file
