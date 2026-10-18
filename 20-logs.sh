@@ -9,16 +9,16 @@ else
     echo "You are running this script as root user with sudo acess,you can be accessed successfully."
 fi 
 mkdir -p "$logs_folder"
-echo "Script execution started at $(date +%F %T)" &>> $log_file
+echo "Script execution started at $(date +"%F %T")" 
 validate(){
     if [ $1 -ne 0 ]; then
-        echo "$2 installed failed."  
+        echo "$2 installed failed." | tee -a $log_file 
         exit 0
     else    
-        echo " $2 installed successfully." 
+        echo " $2 installed successfully." | tee -a $log_file
 }
 dnf install nginx -y  &>> $log_file
 validate $? "nginx installation"
 dnf install mysql -y &>> $log_file
 validate $? "mysql installation"
-echo "Script execution completed at $(date +%F %T)" &>> $log_file
+echo "Script execution completed at $(date +"%F %T")" 
