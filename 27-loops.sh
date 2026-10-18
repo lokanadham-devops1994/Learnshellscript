@@ -22,11 +22,12 @@ for package in $@;
     do
         dnf list installed $package &>> $log_file
         if [ $? -eq 0 ]; then
+            echo "${package} is already installed,skipping."
             echo "Going to install: ${package}"
             dnf install $package -y &>> $log_file
             validate $? "${package} installation"
         else
-             echo "${package} is already installed,skipping."
+             echo "${package} is not installed,intalled succesfully."
         fi
     done
 echo "Script execution completed at $(date +"%F %T")" &>> $log_file
