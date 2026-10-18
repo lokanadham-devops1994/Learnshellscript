@@ -10,6 +10,6 @@ echo -e "${M}Hello ${G}World!${N}"
 echo "step-1"
 echo "step-2"
 echo "step-3"
-echo -e "$ {G}Proceed to contnue..!"
+echo -e "${G}Proceed to contnue..!"
 echo -e "${M}Script exexcution ending at $(date +"%F %T")${N}"
 dfhhfsdhvnv
