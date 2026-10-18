@@ -24,3 +24,4 @@ for package in $@;
         dnf install $package -y  &>> $log_file
         validate $? "${package} installation"
     done
+echo "Script execution completed at $(date +"%F %T")" &>> $log_file
