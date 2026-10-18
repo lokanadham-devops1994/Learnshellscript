@@ -1,7 +1,7 @@
 #!/bin/bash
 user_id=$(id -u)
 logs_folder="/var/log/shellscript Practice_logs"
-log_file="${logs_folder}/${0}_$(date +%Y-%m-%d_%H-%M-%S).log"
+log_file="${logs_folder}/${0}.log"
 if [ $user_id -ne 0 ]; then
   echo "Please run this script with root privileges."
     exit 0
