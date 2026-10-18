@@ -13,14 +13,16 @@ echo "Logs will be saved in $log_file"
 echo "Script execution started at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
 validate(){
     if [ $? -ne 0 ]; then
-        echo "You are running this script as root user with sudo acess, $2 installed failed."  
+        echo "2 installed failed."  
         exit 0
     else    
-        echo "You are  running this script as root user with sudo acess, $2 installed successfully." 
+        echo " $2 installed successfully." 
     fi
 }
 dnf install nginx -y  &>> $log_file
 validate $? "nginx installation"
+
 dnf install mysql -y &>> $log_file
 validate $? "mysql installation"
+
 echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
