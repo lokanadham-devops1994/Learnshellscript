@@ -19,8 +19,8 @@ validate(){
         echo "You are  running this script as root user with sudo acess, $2 installed successfully." 
     fi
 }
-dnf install nginx -y sudo &>> $log_file
+dnf install nginx -y  &>> $log_file
 validate $? "nginx installation"
-dnf install mysql -y sudo &>> $log_file
+dnf install mysql -y &>> $log_file
 validate $? "mysql installation"
 echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
