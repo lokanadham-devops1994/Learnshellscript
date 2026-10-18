@@ -13,7 +13,7 @@ echo "Logs will be saved in $log_file"
 echo "Script execution started at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
 validate(){
     if [ $? -ne 0 ]; then
-        echo "2 installed failed."  
+        echo "$2 installed failed."  
         exit 0
     else    
         echo " $2 installed successfully." 
