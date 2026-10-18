@@ -4,7 +4,7 @@ logs_folder="/var/log/shellscript-Practice"
 log_file="${logs_folder}/${0}.log"
 if [ $user_id -ne 0 ]; then
   echo "Please run this script with root privileges."
-    exit 0
+    exit 1
 else
     echo "You are running this script as root user with sudo acess,you can be accessed successfully."
 fi 
