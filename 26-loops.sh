@@ -12,10 +12,10 @@ mkdir -p "$logs_folder"
 echo "Script execution started at $(date +"%F %T")" &>> $log_file
 validate(){
     if [ $1 -ne 0 ]; then
-        echo "${2}  failed." | tee -a $log_file
+        echo "${2}  Failed!" | tee -a $log_file
         exit 1
     else    
-        echo "${2}  successful." | tee -a $log_file
+        echo "${2}  Successful!" | tee -a $log_file
         fi
 }
 for package in $@;
