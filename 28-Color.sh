@@ -1,0 +1,36 @@
+#!/bin/bash
+user_id=$(id -u)
+logs_folder="/var/log/shellscript-Practice"
+log_file="${logs_folder}/${0}.log"
+R=\e"[31m"
+G=\e"[32m"
+Y=\e"[33m"
+N=\e"[0m"
+if [ $user_id -ne 0 ]; then
+  echo "Please run this script with root privileges."
+    exit 0
+else
+    echo "You are running this script as root user with sudo acess,you can be accessed successfully."
+fi 
+mkdir -p "$logs_folder"
+echo "Script execution started at $(date +"%F %T")" &>> $log_file
+validate(){
+    if [ $1 -ne 0 ]; then
+        echo -e "${2} ${R} failed${N}" | tee -a $log_file
+        exit 1
+    else    
+        echo -e "${2}  ${G}successful${N}" | tee -a $log_file
+        fi
+}
+for package in $@;
+    do
+        dnf list installed $package &>> $log_file
+        if [ $? -ne 0 ]; then
+            echo "Going to install: ${package}is arleady installed....,${Y}SKIPPING${N}"
+            dnf install $package -y &>> $log_file
+            validate $? "installaling ${package}"
+        else
+        echo "${package} is not installed, Installing ${G}SUCCESSFULLY${N}"
+        fi
+    done
+echo "Script execution completed at $(date +"%F %T")" &>> $log_file
