@@ -2,10 +2,10 @@
 user_id=$(id -u)
 logs_folder="/var/log/shellscript-Practice"
 log_file="${logs_folder}/${0}.log"
-R=\e"[31m"
-G=\e"[32m"
-Y=\e"[33m"
-N=\e"[0m"
+R="\e[1;31m"
+G="\e[1;32m"
+Y="\e[1;33m"
+N="\e[0m"
 if [ $user_id -ne 0 ]; then
   echo "Please run this script with root privileges."
     exit 0
