@@ -25,4 +25,4 @@ validate $? "nginx installation"
 dnf install mysql -y sudo &>> $log_file
 validate $? "mysql installation"
 echo "Please run this script with root privileges to check the condition of the user then still proceed...."
-echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)" | tee -a $log_file
+echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file 
