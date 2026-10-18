@@ -10,19 +10,17 @@ else
 fi 
 mkdir -p "$logs_folder"
 echo "Logs will be saved in $log_file"
-echo "Script execution started at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
+echo "Script execution started at $(date +%Y-%m-%d_%H-%M-%S)" &>> $log_file
 validate(){
-    if [ $? -ne 0 ]; then
-        echo "$2 installed failed."  
+    if [ $1 -ne 0 ]; then
+        echo "$2 installed failed." | tee -a $log_file 
         exit 0
     else    
-        echo " $2 installed successfully." 
+        echo " $2 installed successfully." | tee -a $log_file
     fi
 }
 dnf install nginx -y  &>> $log_file
 validate $? "nginx installation"
-
 dnf install mysql -y &>> $log_file
 validate $? "mysql installation"
-
-echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)"  | tee -a $log_file
+echo "Script execution completed at $(date +%Y-%m-%d_%H-%M-%S)" &>> $log_file
