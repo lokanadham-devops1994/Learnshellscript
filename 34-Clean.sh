@@ -19,18 +19,15 @@ if [! "$source_dir"]; then
 fi
 echo "Scanning files older than $days in $source_dir"
 files_to_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
-
 if [ -z "$files_to_delete" ]; then
     echo "No log files found older than $days"
     exit 0
 fi
-
 while IFS= read -r line
 do
     echo "File is going to be deleted: $line"
     rm -f $line
     echo "File deleted: $line"
 done <<< "$files_to_delete"
-
 # < -> for file inputs
 # <<< -> variable as input
