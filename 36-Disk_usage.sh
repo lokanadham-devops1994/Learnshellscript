@@ -10,6 +10,6 @@ do
         message+="High Disk Usage on $partition: $usage <br>"
     fi
 done <<< "$disk_usage"
-# echo -e "$message"
+echo -e "$message"
 sh "37-Mail.sh" "DevOps Team" "$server_ip" "High Disk Usage" "$message" "lokanadham.mec338@gmail.com" "WARNING: High Disk Usage Alert"
 # sh 37-Mail.sh "DevOps Team" "$server_ip" "High Disk Usage" "$message" "<your-to-mail>" "WARNING: High Disk Usage Alert"
