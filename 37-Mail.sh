@@ -14,11 +14,3 @@ echo "Content-Type: text/html"
 echo ""
 echo "$final_body"
 } | msmtp "$to_address"
-
-# {
-# echo "To: lokanadham.mec338@gmail.com"
-# echo "Subject: Test Subject from Shell script"
-# echo "Content-Type: text/html"
-# echo ""
-# echo "Test Content"
-# } | msmtp "lokanadham.mec338@gmail.com"
