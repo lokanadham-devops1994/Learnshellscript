@@ -23,24 +23,24 @@ if [ ! -d "$dest_dir" ]; then
     echo "Destination Directory: $dest_dir does not exist"
     exit 1
 fi
-echo "Scanning files older than $days days in $source_dir"
-files_to_archive=$(find $source_dir -name "*.log" -type f -mtime +$days)
-if [ -z "$files_to_archive" ]; then
-    echo "No log files found older than $days days"
-    exit 0
-fi
-timestamp=$(date +%Y-%m-%d-%H-%M-%S)
-file_name="$dest_dir/logs-$timestamp.tar.gz"
-tar -czf $file_name $files_to_archive
-if [ $? -ne 0 ]; then
-    echo "Logs archival is failed"
-    exit 1
-else
-    echo "Logs are archived: $file_name"
-    while IFS= read -r line
-    do
-        echo "File is going to be deleted: $line"
-        rm -f $line
-        echo "File deleted: $line"
-    done <<< "$files_to_archive"
-fi
+# echo "Scanning files older than $days days in $source_dir"
+# files_to_archive=$(find $source_dir -name "*.log" -type f -mtime +$days)
+# if [ -z "$files_to_archive" ]; then
+#     echo "No log files found older than $days days"
+#     exit 0
+# fi
+# timestamp=$(date +%Y-%m-%d-%H-%M-%S)
+# file_name="$dest_dir/logs-$timestamp.tar.gz"
+# tar -czf $file_name $files_to_archive
+# if [ $? -ne 0 ]; then
+#     echo "Logs archival is failed"
+#     exit 1
+# else
+#     echo "Logs are archived: $file_name"
+#     while IFS= read -r line
+#     do
+#         echo "File is going to be deleted: $line"
+#         rm -f $line
+#         echo "File deleted: $line"
+#     done <<< "$files_to_archive"
+# fi
