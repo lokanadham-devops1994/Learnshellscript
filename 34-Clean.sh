@@ -14,7 +14,7 @@ if [ -z "$source_dir" ]; then
     echo "ERRoR:: Missing Parameter"
     usage
 fi
-if [ ! "$source_dir"]; then
+if [ ! "$source_dir" ]; then
     echo -e "${R}ERROR:: $source_dir does not exist${N}"
 fi
 # echo "Scanning files older than $days in $source_dir"
