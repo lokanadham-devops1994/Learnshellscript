@@ -5,7 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 source_dir=$1
-days=${ 2:-14 } # If user not known to passing days, We will consider to take 14 days as default
+days=${2:-14} # If user not known to passing days, We will consider to take 14 days as default
 usage (){
     echo -e "${R}USAGE:: $0 [SOURCE_DIR] [days(Optional, default to 14 days)]${N}"
     exit 1
