@@ -11,7 +11,7 @@ usage (){
     exit 1
 }
 if [ -z "$source_dir" ]; then
-    echo "ERRoR:: Missing Parameter"
+    echo "ERROR:: Missing Parameter"
     usage
 fi
 if [ ! "$source_dir" ]; then
